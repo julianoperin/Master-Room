@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Roboto&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 body{
     font-family: 'Roboto', sans-serif;
+    line-height: 1.4rem;
 }
 a {
     text-decoration: none;
@@ -15,12 +14,19 @@ a {
 p {
     margin: 0.75rem;
 }
-
 /* Utility Classes */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+.text-center {
+    text-align: center;
+}
 .text-primary {
     color: #93cb52;
 }
-
 #navbar {
     display: flex;
     position: sticky;
@@ -44,5 +50,82 @@ p {
 #navbar ul li a:hover {
     background: #93cb52;
     border-radius: 7px;
+}
+.l-heading {
+    font-family: 'Indie Flower', cursive;
+    font-size: 4.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+.m-heading {
+    font-family: cursive;
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+.lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+.btn {
+    display: inline-block;
+    color: #fff;
+    background: #93cb52;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 7px;
+}
+.py-1 {
+    padding: 1.5rem;
+}
 
+.py-2 {padding: 2rem;}
+.py-3 {padding: 3rem;}
+
+.btn:hover {
+    background: #7ab436;
+}
+.btn-dark {
+    background: #333;
+    color: #fff;
+}
+/* ShowCase */
+#showcase {
+    background: #333 url('../img/nyc.jpeg') no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+}
+/* Using flex box for the showcase */
+#showcase .showcase-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    /***********************/
+    padding: 0 2rem;
+    /* Overlay */
+    position: absolute;
+    top: 55px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, 0.4);
+}
+
+/* sECTION: What We Do */
+#what .items {
+    display: flex;
+}
+#what .items .item {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+}
+#what .items .item i {
+    background: #93cb52;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
 }
